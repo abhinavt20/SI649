@@ -20,7 +20,7 @@
             text-align: center;
         }
         main {
-            padding: 15px 5%; /* Reduced padding on the sides for larger displays */
+            padding: 15px 5%; /* Reduced padding on the sides */
             max-width: 1250px;
             margin: auto;
             background: white;
@@ -31,35 +31,34 @@
             color: #0056b3;
         }
         iframe {
-/*             max-width: 100%; /* Ensures the iframe scales dynamically */
-/*             max-height: 100%; /* Ensures the iframe scales dynamically */ */
-            border: none; */
-        }
-        ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        footer ul {
-            padding: 0;
-        }
-        footer ul li {
-            list-style-type: none;
-            margin: 5px 0;
-        }
-        footer a {
-            color: white;
-            text-decoration: none;
+            width: 100%;
+            border: none;
         }
         figure {
-            margin: 0px 0;
-            align-items: center;
+            margin: 20px auto; /* Center the figure */
+            text-align: center;
+            display: block;
         }
         figcaption {
             text-align: center;
             font-style: italic;
-            margin-top: 0px;
+            margin-top: 10px;
         }
     </style>
+    <script>
+        // JavaScript to dynamically resize iframe based on content
+        function resizeIframe(iframe) {
+            iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
+            iframe.style.width = iframe.contentWindow.document.documentElement.scrollWidth + 'px';
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const iframes = document.querySelectorAll("iframe");
+            iframes.forEach(iframe => {
+                iframe.onload = () => resizeIframe(iframe);
+            });
+        });
+    </script>
 </head>
 <body>
 <header>
