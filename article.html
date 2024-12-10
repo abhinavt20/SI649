@@ -195,7 +195,17 @@
 </html>
  -->
 
- <!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -228,31 +238,13 @@
             color: #0056b3;
         }
         iframe {
-            width: 100%; /* Full width of the parent container */
-            max-width: 1200px; /* Set a max width */
-            height: auto; /* Dynamically adjust height */
+            width: 100%;
             border: none;
-        }
-        ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        footer ul {
-            padding: 0;
-        }
-        footer ul li {
-            list-style-type: none;
-            margin: 5px 0;
-        }
-        footer a {
-            color: white;
-            text-decoration: none;
         }
         figure {
             margin: 20px auto; /* Center the figure */
             text-align: center;
             display: block;
-            max-width: 90%; /* Restrict max width of the figure */
         }
         figcaption {
             text-align: center;
@@ -260,6 +252,20 @@
             margin-top: 10px;
         }
     </style>
+    <script>
+        // JavaScript to dynamically resize iframe based on content
+        function resizeIframe(iframe) {
+            iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
+            iframe.style.width = iframe.contentWindow.document.documentElement.scrollWidth + 'px';
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const iframes = document.querySelectorAll("iframe");
+            iframes.forEach(iframe => {
+                iframe.onload = () => resizeIframe(iframe);
+            });
+        });
+    </script>
 </head>
 <body>
 <header>
@@ -269,11 +275,11 @@
     <h2>Favorability Over Time: Biden and Trump</h2>
     <p>When Joe Biden announced his candidacy for president in April 2019, his campaign emphasized a return to normalcy and national unity...</p>
 
-    <!-- Centered Figure with Full-Width Scaling -->
+    <!-- Fully Displayed Figure -->
     <figure>
         <iframe 
             src="chart3.html" 
-            style="max-width: 100%; height: 600px;">
+            onload="resizeIframe(this)">
         </iframe>
         <figcaption>Figure 1: Favorability Trends of Biden and Trump by Demographic Subcategory</figcaption>
     </figure>
@@ -281,11 +287,11 @@
     <h2>Demographic Voting Patterns in 2020</h2>
     <p>The 2020 Presidential Election wasn’t just about the candidates...</p>
 
-    <!-- Another Centered Figure -->
+    <!-- Another Fully Displayed Figure -->
     <figure>
         <iframe 
             src="chart1.html" 
-            style="max-width: 100%; height: 700px;">
+            onload="resizeIframe(this)">
         </iframe>
         <figcaption>Figure 2: 2020 Presidential Election Voting Breakdown by Demographic</figcaption>
     </figure>
@@ -300,3 +306,8 @@
 </footer>
 </body>
 </html>
+
+
+
+
+
