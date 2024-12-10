@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Evolution of Voter Behavior and Favorability</title>
+    <title>How Voter Trends and Favorability Shaped the 2020 Election</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            color: #333;
+            background-color: #f8f9fa;
         }
         header, footer {
             background: #007BFF;
@@ -19,9 +21,29 @@
         }
         main {
             padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h1, h2, h3 {
-            color: #007BFF;
+            color: #0056b3;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        footer ul {
+            padding: 0;
+        }
+        footer ul li {
+            list-style-type: none;
+            margin: 5px 0;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
         }
         figure {
             margin: 20px 0;
@@ -31,90 +53,63 @@
             font-style: italic;
             margin-top: 5px;
         }
-        .references {
-            padding: 20px;
-        }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <body>
 <header>
-    <h1>The Evolution of Voter Behavior and Favorability</h1>
+    <h1>How Voter Trends and Favorability Shaped the 2020 Election</h1>
 </header>
 <main>
     <h2>Introduction</h2>
-    <p>Understanding the interplay of favorability trends, demographic voting patterns, and state-level dynamics provides a comprehensive lens into the American electoral process. This article explores these themes, tracing favorability ratings over time, analyzing voter demographics, and examining composite socio-political scores across states during the 2020 Presidential Election. The goal is to illuminate the shifts in public opinion and their implications for future elections.</p>
+    <p>The American political landscape is anything but static. Elections serve as snapshots of the nation's collective mindset, shaped by favorability trends, demographic patterns, and state-level dynamics. The 2020 Presidential Election was no exception, reflecting deep societal divisions and evolving political preferences. This article dives into the favorability ratings of Joe Biden and Donald Trump over time, explores how demographic factors influenced voter behavior, and examines state-level electoral trends through the lens of composite socio-political scores. By connecting these threads, we aim to understand what these patterns reveal about the future of American elections.</p>
 
     <h2>Favorability Over Time: Biden and Trump</h2>
-    <p>Public opinion is dynamic, influenced by political events, economic conditions, and societal trends. Joe Biden announced his candidacy for the presidency in April 2019, entering a crowded Democratic field with a message of unity and restoration (“Joe Biden Announces Presidential Run”). From this point onward, his favorability ratings saw significant shifts.</p>
-
-    <figure>
-        <div id="chart3"></div>
-        <figcaption>Figure 1: Favorability Trends of Biden and Trump by Demographic Subcategory.</figcaption>
-    </figure>
-    <script>
-        const chart3Spec = /* CHART 3 SPEC FROM FILE */;
-        vegaEmbed('#chart3', chart3Spec);
-    </script>
-    <p>As seen in Figure 1, Biden’s favorability peaked in January 2021, shortly after his inauguration, with strong support from younger voters and people of color. His favorability among 18-34-year-olds rose to 67%, reflecting optimism about his presidency. However, this support eroded significantly by 2023, with ratings among the same demographic dropping to 30%. This decline can be attributed to concerns over inflation, legislative gridlock, and broader disillusionment with political institutions (“Biden’s Approval Ratings in 2023”).</p>
-
-    <p>Donald Trump’s favorability exhibited less fluctuation but remained deeply polarized. His support among White adults consistently outpaced that among people of color, highlighting enduring racial divides in political allegiance. The data shows Trump’s favorability rising among people of color from 15% in January 2021 to 35% by December 2023, suggesting efforts to expand his appeal beyond his traditional base (“American Presidential Candidates Favorability”).</p>
-
-    <h2>Demographic Voting Patterns in 2020</h2>
-    <p>To understand the outcomes of the 2020 Presidential Election, it is essential to examine voter demographics. The election saw unprecedented voter turnout, driven by heightened political polarization and the challenges posed by the COVID-19 pandemic (“Voter Turnout 2018-2022”).</p>
+    <p>When Joe Biden announced his candidacy for president in April 2019, his campaign emphasized a return to normalcy and national unity (“Joe Biden Announces Presidential Run”). His message resonated strongly at first, but favorability is a moving target, shaped by the winds of political and social change.</p>
 
     <figure>
         <div id="chart1"></div>
-        <figcaption>Figure 2: 2020 Presidential Election Voting Breakdown by Demographic.</figcaption>
+        <figcaption>Figure 1: Favorability Trends of Biden and Trump by Demographic Subcategory</figcaption>
     </figure>
-    <script>
-        const chart1Spec = /* CHART 1 SPEC FROM FILE */;
-        vegaEmbed('#chart1', chart1Spec);
-    </script>
-    <p>Figure 2 highlights the stark differences in voting preferences among demographic groups. Gender played a crucial role: 55% of women supported Biden, compared to 44% for Trump, whereas men leaned slightly towards Trump. This gender gap underscores broader societal divisions, as women are more likely to prioritize healthcare and education, issues central to Biden’s campaign platform (“Demographic Patterns in 2020 Voting”).</p>
+    <p>Biden’s favorability peaked in January 2021, immediately following his inauguration. During this period, his ratings soared among younger voters (18-34 years old), reaching 67%. Optimism around his administration's potential to address issues like healthcare, education, and climate change fueled this initial wave of support. However, this honeymoon period didn’t last long. By December 2023, his favorability among younger voters plummeted to 30%. The decline reflects growing dissatisfaction with his administration’s handling of inflation and legislative stalemates (“Biden’s Approval Ratings in 2023”).</p>
 
-    <p>Racial and ethnic differences were even more pronounced. Black voters overwhelmingly supported Biden (92%), continuing a long-standing trend of Democratic alignment. Hispanic voters also favored Biden, albeit to a lesser extent (61%), reflecting the diversity within this demographic. Trump, meanwhile, secured a majority of White voters (55%), particularly those without a college degree, emphasizing the educational divide in contemporary politics (“Racial Voting Trends in 2020”).</p>
+    <p>Donald Trump’s favorability over the same period showed less dramatic swings but revealed consistent polarization. His support remained strong among White voters, with favorability hovering around 50%. Interestingly, Trump’s favorability among people of color, historically a weaker demographic for Republicans, rose from 15% in January 2021 to 35% by late 2023. This suggests targeted outreach efforts aimed at diversifying his base may have paid off (“American Presidential Candidates Favorability”).</p>
 
-    <h3>Age and Educational Attainment</h3>
-    <p>Age and education further defined the electoral landscape. Younger voters (18-29 years old) supported Biden at 61%, highlighting generational differences in political values. In contrast, older voters (65+) slightly favored Trump, illustrating their preference for conservative policies. Educational attainment also played a pivotal role: Biden garnered 61% of college graduates, while Trump won 53% of those with a high school education or less. These patterns reflect the increasing educational polarization in American elections (“Education’s Role in Voting Behavior”).</p>
+    <h2>Demographic Voting Patterns in 2020</h2>
+    <p>The 2020 Presidential Election wasn’t just about the candidates; it was a reflection of the diverse, complex makeup of the American electorate. Voter turnout reached record highs, with citizens from all walks of life exercising their right to vote despite the challenges of the COVID-19 pandemic. The breakdown of voting preferences across gender, race, ethnicity, education, income, and religion provides a detailed tapestry of American political behavior.</p>
+
+    <h3>Gender Divides</h3>
+    <p>Gender was one of the most striking factors in voting behavior. Women strongly favored Joe Biden, with 55% voting for him compared to Donald Trump’s 44%. This aligns with broader trends where women prioritize issues like healthcare, reproductive rights, and social equality—key elements of Biden’s platform. On the other hand, men leaned slightly toward Trump, giving him 50% of their votes to Biden’s 48%. This divide highlights persistent gender differences in political priorities, with men often drawn to Trump’s focus on economic growth and national security.</p>
+
+    <h3>Racial and Ethnic Differences</h3>
+    <p>Race and ethnicity were among the most defining factors of the election. Black voters continued to be the backbone of the Democratic coalition, with 92% supporting Biden. This unwavering loyalty underscores the historical alignment of the Black community with the Democratic Party, driven by its emphasis on civil rights and social justice. Hispanic voters also leaned toward Biden at 61%, though regional and economic differences within this group created variations. For instance, Cuban Americans in Florida were more likely to support Trump due to his strong anti-socialist rhetoric.</p>
+
+    <h3>Income and Economic Concerns</h3>
+    <p>Income played a critical role in determining voter preferences. Among voters earning less than $50,000 annually, 54% supported Biden, while 44% voted for Trump. This group tends to prioritize issues like healthcare access and social safety nets, areas where Biden's platform resonated. For voters earning between $50,000 and $100,000, the split was closer—Trump narrowly led with 52% compared to Biden’s 47%. Interestingly, voters earning more than $100,000 skewed back toward Biden, with 55% supporting him. This suggests that wealthier voters, particularly in urban and suburban areas, were more influenced by Biden’s tax policies and progressive stance on social issues than by Trump’s economic deregulation.</p>
+
+    <h3>Educational Polarization</h3>
+    <p>Education remains one of the most reliable predictors of voting behavior in the United States. Among voters with postgraduate degrees, Biden achieved a commanding lead, securing 67% of their votes compared to Trump’s 32%. This trend extends to voters with four-year college degrees, where Biden maintained a 56% majority. However, among voters with some college education or a high school diploma or less, Trump led with 50% and 56%, respectively.</p>
 
     <h2>State-Level Dynamics: Composite Socio-Political Scores</h2>
-    <p>Moving beyond individual demographics, state-level analysis offers a macro perspective on voting behavior. A composite score integrating education, income, and religiosity provides a nuanced understanding of state-level electoral dynamics.</p>
+    <p>While individual demographics provide critical insights, state-level trends offer a broader perspective on electoral behavior. A composite score integrating education, income, and religiosity reveals key patterns in state-level voting.</p>
 
-    <figure>
-        <div id="chart2"></div>
-        <figcaption>Figure 3: Composite Score by State and 2020 Presidential Election Results.</figcaption>
-    </figure>
-    <script>
-        const chart2Spec = /* CHART 2 SPEC FROM FILE */;
-        vegaEmbed('#chart2', chart2Spec);
-    </script>
-    <p>Figure 3 reveals how states with higher composite scores, such as Massachusetts and Colorado, leaned Democratic, while those with lower scores, like Alabama and Mississippi, predominantly supported Trump. Education emerged as a key factor: states with higher percentages of college-educated residents were more likely to vote for Biden. Income levels also influenced voting behavior, as wealthier states like Connecticut and New Jersey favored Democrats, reflecting their alignment with progressive economic policies (“Composite Electoral Trends in 2020”).</p>
+    <p><strong>High Composite Scores: Democratic Strongholds</strong><br>
+    States like Massachusetts and Colorado, with high percentages of college-educated residents and affluent populations, leaned heavily toward Biden. Their progressive stance on issues such as climate change and social equity aligned with the Democratic platform. Wealthier states like Connecticut and New Jersey also favored Biden, showcasing the correlation between income levels and voting preferences (“Composite Electoral Trends in 2020”).</p>
 
-    <h3>The Role of Religiosity</h3>
-    <p>Religiosity played a dual role in shaping state-level outcomes. States with higher levels of religious observance, such as Mississippi and Alabama, showed strong Republican support, aligning with Trump’s appeal to evangelical voters. Conversely, less religious states like Vermont and Oregon favored Biden, highlighting the cultural divide between secular and religious communities (“Religious Influence on State Voting”).</p>
+    <p><strong>Low Composite Scores: Republican Strongholds</strong><br>
+    Conversely, states with lower composite scores, such as Alabama and Mississippi, showed strong support for Trump. These states tend to have higher levels of religiosity and lower median incomes, aligning with Trump’s messaging on traditional values and economic nationalism.</p>
 
-    <h2>Conclusion</h2>
-    <p>The analysis of favorability trends, demographic patterns, and state-level dynamics underscores the complexity of American elections. Biden’s declining favorability among younger voters and independents poses challenges for his 2024 campaign, while Trump’s efforts to broaden his appeal may influence future electoral strategies. Understanding these patterns is essential for navigating the evolving political landscape and crafting policies that resonate with diverse constituencies.</p>
+    <h2>Implications for Future Elections</h2>
+    <p>The 2020 election and subsequent favorability trends underscore a deeply divided nation, but they also provide a roadmap for understanding future elections. Biden’s declining favorability among younger voters signals the need for the Democratic Party to reconnect with this critical demographic, addressing their concerns about climate change, student debt, and economic inequality. Meanwhile, Trump’s ability to maintain a strong base, coupled with his incremental gains among people of color, suggests the Republican Party is evolving its outreach strategy.</p>
+
+    <p>As the nation approaches the 2024 Presidential Election, these insights will be pivotal in shaping campaign strategies and predicting voter behavior. By understanding the interplay of favorability, demographics, and state-level dynamics, political analysts and campaigners can better anticipate the shifting tides of American politics.</p>
 </main>
 <footer>
-    <div class="references">
-        <h2>References</h2>
-        <ul>
-            <li>“American Presidential Candidates Favorability.” <em>Gallup</em>, 2023. [Link](https://news.gallup.com/poll/548138/american-presidential-candidates-2024-election-favorable-ratings.aspx).</li>
-            <li>“Biden’s Approval Ratings in 2023.” <em>Gallup</em>, 2023. [Link](https://news.gallup.com/poll/548138/american-presidential-candidates-2024-election-favorable-ratings.aspx).</li>
-            <li>“Composite Electoral Trends in 2020.” Internal Data Analysis.</li>
-            <li>“Demographic Patterns in 2020 Voting.” <em>Pew Research</em>, 2023. [Link](https://www.pewresearch.org/politics/2023/07/12/voter-turnout-2018-2022/).</li>
-            <li>“Education’s Role in Voting Behavior.” Internal Data Analysis.</li>
-            <li>“Joe Biden Announces Presidential Run.” <em>The New York Times</em>, April 2019.</li>
-            <li>“Racial Voting Trends in 2020.” <em>Pew Research</em>, 2023. [Link](https://www.pewresearch.org/politics/2023/07/12/voter-turnout-2018-2022/).</li>
-            <li>“Religious Influence on State Voting.” Internal Data Analysis.</li>
-            <li>“Voter Turnout 2018-2022.” <em>Pew Research</em>, 2023. [Link](https://www.pewresearch.org/politics/2023/07/12/voter-turnout-2018-2022/).</li>
-        </ul>
-    </div>
-    <p>&copy; 2024 Jason Kemp | Political Data Insights</p>
+    <h3>References</h3>
+    <ul>
+        <li><a href="https://news.gallup.com/poll/548138/american-presidential-candidates-2024-election-favorable-ratings.aspx">“American Presidential Candidates Favorability.” Gallup, 2023.</a></li>
+        <li><a href="https://www.pewresearch.org/politics/2023/07/12/voter-turnout-2018-2022/">“Voter Turnout 2018-2022.” Pew Research Center, 2023.</a></li>
+        <li><a href="#">“Biden’s Approval Ratings in 2023.” Gallup, 2023.</a></li>
+    </ul>
 </footer>
 </body>
 </html>
